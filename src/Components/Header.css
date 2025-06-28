@@ -1,0 +1,25 @@
+.centrHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.fonmagaz {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 150px;
+    background-color: #005da7; /* Синий цвет */
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-fonmagaz {
+     color: white;
+     font: small-caps bold 40px/1 sans-serif;
+     padding: 20px;
+     display: flex;
+ }
