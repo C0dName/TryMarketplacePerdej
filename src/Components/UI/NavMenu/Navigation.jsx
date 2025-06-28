@@ -1,8 +1,9 @@
 import React from 'react';
-import './Navigation.css'
+import classes from './Navigation.module.css'
+import NavButton from "../Button/NavButton";
 
 const Navigation = () => {
-    function Navigation () {
+
         // Обработчик для кнопки меню
         document.getElementById('menuToggle').addEventListener('click', function (e) {
             e.stopPropagation();
@@ -25,35 +26,26 @@ const Navigation = () => {
             });
         });
 
-    }
+
+
     return (
         <div>
-            <nav id="mainNav" className="main">
-                <ul id="navList" className="navigation">
+            <nav id="mainNav" className={classes.main}>
+                <ul id="navList" className={classes.navigation}>
                     <li id="menuItem">
-                        <button id="menuToggle" className="bluebox">Каталог пердежей</button>
+                        <NavButton id="menuToggle">Каталог</NavButton>
                         <ul id="dropdownMenu">
                             <li>
-                                <button id="menuOption1" className="bluebox dropdown-item">Сладкий</button>
-                            </li>
-                            <li>
-                                <button id="menuOption2" className="bluebox dropdown-item">Кисло-сладкий</button>
-                            </li>
-                            <li>
-                                <button id="menuOption3" className="bluebox dropdown-item">Тухлый</button>
+                                <NavButton id="menuOption1">Сладкий</NavButton>
+                                <NavButton id="menuOption2">Кисло-сладкий</NavButton>
+                                <NavButton id="menuOption3">Тухлый</NavButton>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <button id="boxButton" className="bluebox">Тара</button>
-                    </li>
-                    <li>
-                        <button id="bankButton" className="bluebox">Список банков</button>
-                    </li>
                 </ul>
-                <script src="app.js"></script>
             </nav>
         </div>
+
     );
 };
 

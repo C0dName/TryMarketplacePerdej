@@ -2,7 +2,7 @@ import React from 'react';
 import Products from "./Products";
 import classes from "./ProductConteiner.module.css";
 
-const ProductConteiner = ({posts}) => {
+const ProductConteiner = ({posts, remove}) => {
     return (
         <div>
             <h1>
@@ -11,7 +11,7 @@ const ProductConteiner = ({posts}) => {
 
             <div className={classes.productBlock}>
             {posts.map((post, index) => (
-                <Products  number={index + 1} post={post} key={post.id}/>
+                <Products remove={remove} number={index + 1} post={post} key={post.id}/>
             ))}
             </div>
         </div>

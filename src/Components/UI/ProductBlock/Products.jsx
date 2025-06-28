@@ -11,7 +11,9 @@ const Products = (props) => {
             <p className={classes.productName}>{props.post.title}</p>
             <p className={classes.productPrice}>{props.post.title1}</p>
             <p className={classes.productRating}>{props.post.title2}</p>
-            <button>Удалить</button>
+            <button onClick={() => props.remove(props.post)}>
+                Удалить
+            </button>
         </div>
 
     );
